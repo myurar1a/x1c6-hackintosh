@@ -60,6 +60,7 @@ I consider the state of this project to be **very stable**. Everything works the
 - Edit config.plist
   - Misc/Boot/ShowPicker: OFF --> ON
   - Misc/Security/SecureBootModel: Deafult --> Disabled
+  - Misc/Security/ScanPolicy: 983299 --> 0
   - NVRAM/Add/boot-args: blank --> -v debug=0x100 keepsyms=1 alcid=21
 
 ### 2022-8-24
