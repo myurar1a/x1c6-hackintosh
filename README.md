@@ -2,17 +2,17 @@
 
 <p align="center">
 <a href="https://www.apple.com/macos/big-sur/">
-  <img src="https://img.shields.io/badge/macOS-Monterey_v12.5.1-red.svg"/> </a>
+  <img src="https://img.shields.io/badge/macOS-Monterey_v12.6.3-red.svg"/> </a>
 <a href="https://pcsupport.lenovo.com/us/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-6th-gen-type-20kh-20kg/downloads/driver-list/component?name=BIOS%2FUEFI">
-  <img src="https://img.shields.io/badge/BIOS-Modded_1.56-blue"/> </a>
+  <img src="https://img.shields.io/badge/BIOS-1.58-blue"/> </a>
 <a href="https://github.com/tylernguyen/x1c6-hackintosh/blob/master/docs/references/x1c6-Platform_Specifications.pdf">
   <img src="https://img.shields.io/badge/Model-20KH*-9cf"/> </a>
 <a href="https://github.com/acidanthera/OpenCorePkg">
-  <img src="https://img.shields.io/badge/OpenCore-0.8.3-12AED6"/> </a>
+  <img src="https://img.shields.io/badge/OpenCore-0.8.8-12AED6"/> </a>
 <a href="https://github.com/tylernguyen/x1c6-hackintosh/issues"> 
-  <img src="https://img.shields.io/github/issues/tylernguyen/x1c6-hackintosh"/> </a>
+  <img src="https://img.shields.io/github/issues/myurar1a/x1c6-hackintosh"/> </a>
 <a href="https://github.com/tylernguyen/x1c6-hackintosh/commits/master"> 
-  <img src="https://img.shields.io/github/last-commit/tylernguyen/x1c6-hackintosh"/> </a>
+  <img src="https://img.shields.io/github/last-commit/myurar1a/x1c6-hackintosh"/> </a>
 <a href="https://github.com/tylernguyen/x1c6-hackintosh/issues?q=is%3Aissue+label%3A%22help+wanted%22+is%3Aclosed">
   <img src="https://img.shields.io/badge/need%20help-2-blue"/> </a>
 </p>
@@ -20,11 +20,9 @@
 <p align="center">
 <a href="https://github.com/tylernguyen/obsidian-horizon/blob/main/LICENSE">
    <img src="https://img.shields.io/badge/License-The%20Unlicense-informational.svg"> </a>
-<a href="https://tylernguyen.xyz/contact">
+<a href="https://twitter.com/myurar1a">
    <img src="https://img.shields.io/badge/%40-Contact-FFF27D"> </a>
-<a href="https://github.com/sponsors/tylernguyen">
-   <img src="https://img.shields.io/badge/%24-Support-ff69b4.svg"> </a>
-<a href="">
+<a href="https://github.com/sponsors/myurar1a">
    <img src="https://img.shields.io/badge/Contributions-Welcome-orange.svg"> </a>
 </p>
 
@@ -49,6 +47,21 @@ I consider the state of this project to be **very stable**. Everything works the
 
 ##### Recent | [Changelog Archive](https://github.com/tylernguyen/x1c6-hackintosh/blob/master/docs/CHANGELOG.md)
 
+### 2023-2-4
+#### Added
+- `AirportItlwm.kext` & `IntelBluetoothFirmware.kext` to make the wireless module compatible with the unmodified x1c6.
+- `HoRNDIS` to enable USB tethering during macOS installation.
+
+#### Changed
+- Standardized to stock BIOS
+- OC to 0.8.8
+- macOS to Monterey 12.6.3
+- Upgraded various Acidanthera kexts (AppleALC: 1.7.8 / WhateverGreen: 1.6.3 / YogaSMC: 1.5.3)
+- Edit config.plist
+  - Misc/Boot/ShowPicker: OFF --> ON
+  - Misc/Security/SecureBootModel: Deafult --> Disabled
+  - NVRAM/Add/boot-args: blank --> -v debug=0x100 keepsyms=1 alcid=21
+
 ### 2022-8-24
 
 #### Added
@@ -71,6 +84,7 @@ Create a pull request if you like to be added, final decision at my discreation.
 
 # Credits
 
+- [@tylernguyen](https://github.com/tylernguyen) The Beginning of Everything
 - [@benbender](https://github.com/benbender) for your hardwork. Much of this repo comes from your research and code. Thank you!
 - [@Fewtarius](https://github.com/fewtarius) for your help with patching audio.
 - [@Colton-Ko](https://github.com/Colton-Ko/macOS-ThinkPad-X1C6) for the great features template.  
